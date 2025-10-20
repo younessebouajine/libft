@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yobouaji <yobouaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 12:34:50 by yobouaji          #+#    #+#             */
-/*   Updated: 2025/10/20 17:26:04 by yobouaji         ###   ########.fr       */
+/*   Created: 2025/10/18 21:24:22 by yobouaji          #+#    #+#             */
+/*   Updated: 2025/10/19 09:28:27 by yobouaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdlib.h>
+#include "libft.h"
+#include <fcntl.h>
 
-// typedef struct s_string
-// {
-//     void *content;
-//     struct s_string *next;
-// } string;
+void    ft_putchar_fd(char c, int fd)
+{
+    write (fd, &c, 1);
+}
 
-// string *name = malloc(sizeof(string));
-// name->content = "yobouaji";
-// name->next = NULL;
-
-// int long long 
-// typedef int long long   LON 
+/*int main()
+{
+    int fd;
+    fd = open("text.txt", O_WRONLY | O_CREAT | O_APPEND, 0644);
+    if (fd == -1)
+        return (1);
+    ft_putchar_fd('A', fd);
+}*/

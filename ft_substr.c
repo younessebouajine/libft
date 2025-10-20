@@ -6,20 +6,20 @@
 /*   By: yobouaji <yobouaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 09:15:23 by yobouaji          #+#    #+#             */
-/*   Updated: 2025/10/17 12:22:06 by yobouaji         ###   ########.fr       */
+/*   Updated: 2025/10/18 09:28:21 by yobouaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_min(size_t a, size_t b)
+static size_t  ft_min(size_t a, size_t b)
 {
     if (a < b)
         return (a);
     return (b);
 }
 
-char    *ft_strempty()
+static char    *ft_strempty()
 {
     unsigned char *dest;
 
@@ -30,7 +30,7 @@ char    *ft_strempty()
         return dest;
 }
 
-char    *ft_substr(const char* s, unsigned int start,size_t len)
+char    *ft_substr(char const *s, unsigned int start,size_t len)
 {
     unsigned char *dest;
     size_t  i;

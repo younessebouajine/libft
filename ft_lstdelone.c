@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yobouaji <yobouaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 12:34:50 by yobouaji          #+#    #+#             */
-/*   Updated: 2025/10/20 17:26:04 by yobouaji         ###   ########.fr       */
+/*   Created: 2025/10/20 11:14:13 by yobouaji          #+#    #+#             */
+/*   Updated: 2025/10/20 17:37:46 by yobouaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdlib.h>
+#include "libft.h"
 
-// typedef struct s_string
-// {
-//     void *content;
-//     struct s_string *next;
-// } string;
-
-// string *name = malloc(sizeof(string));
-// name->content = "yobouaji";
-// name->next = NULL;
-
-// int long long 
-// typedef int long long   LON 
+void ft_lstdelone(t_list *lst, void (*del)(void*))
+{
+    if (lst && del)
+    {
+        del(lst->content);
+        free(lst);
+    }
+}

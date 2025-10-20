@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yobouaji <yobouaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 12:34:50 by yobouaji          #+#    #+#             */
-/*   Updated: 2025/10/20 17:26:04 by yobouaji         ###   ########.fr       */
+/*   Created: 2025/10/19 08:26:55 by yobouaji          #+#    #+#             */
+/*   Updated: 2025/10/19 08:29:37 by yobouaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdlib.h>
+#include "libft.h"
 
-// typedef struct s_string
-// {
-//     void *content;
-//     struct s_string *next;
-// } string;
-
-// string *name = malloc(sizeof(string));
-// name->content = "yobouaji";
-// name->next = NULL;
-
-// int long long 
-// typedef int long long   LON 
+void ft_putstr_fd(char *s, int fd)
+{
+    while (*s)
+    {
+        ft_putchar_fd(*s, fd);
+        s++;
+    }
+}

@@ -6,7 +6,7 @@
 /*   By: yobouaji <yobouaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 14:05:40 by yobouaji          #+#    #+#             */
-/*   Updated: 2025/10/16 14:39:20 by yobouaji         ###   ########.fr       */
+/*   Updated: 2025/10/17 20:58:53 by yobouaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
     return (dest);
 }
 
-int main()
+/*
 {
     int src[4] = {1, 22 , 4, 5};
     int dest[5] = {4 , 5, 6, 7, 8};
@@ -44,4 +44,4 @@ int main()
         printf("%d ", dest[i]);
         i++;
     }
-}
+}*/

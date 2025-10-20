@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yobouaji <yobouaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 12:34:50 by yobouaji          #+#    #+#             */
-/*   Updated: 2025/10/20 17:26:04 by yobouaji         ###   ########.fr       */
+/*   Created: 2025/10/20 10:16:12 by yobouaji          #+#    #+#             */
+/*   Updated: 2025/10/20 10:23:28 by yobouaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdlib.h>
+#include "libft.h"
 
-// typedef struct s_string
-// {
-//     void *content;
-//     struct s_string *next;
-// } string;
+t_list *ft_lstlast(t_list *lst)
+{
+    t_list  *current;
 
-// string *name = malloc(sizeof(string));
-// name->content = "yobouaji";
-// name->next = NULL;
-
-// int long long 
-// typedef int long long   LON 
+    if (!lst)
+        return (NULL);
+    current = lst;
+    while (current != NULL)
+    {
+        if (current->next == NULL)
+            return (current);
+        current = current->next;
+    }
+    return (NULL);
+}

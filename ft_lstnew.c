@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yobouaji <yobouaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 12:34:50 by yobouaji          #+#    #+#             */
-/*   Updated: 2025/10/20 17:26:04 by yobouaji         ###   ########.fr       */
+/*   Created: 2025/10/19 18:30:55 by yobouaji          #+#    #+#             */
+/*   Updated: 2025/10/20 07:57:14 by yobouaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdlib.h>
+#include "libft.h"
 
-// typedef struct s_string
-// {
-//     void *content;
-//     struct s_string *next;
-// } string;
-
-// string *name = malloc(sizeof(string));
-// name->content = "yobouaji";
-// name->next = NULL;
-
-// int long long 
-// typedef int long long   LON 
+t_list *ft_lstnew(void *content)
+{
+    if (!content)
+        return (NULL);
+    t_list  *head;
+    head = (t_list *) malloc(sizeof(t_list));
+    if (!head)
+        return (NULL);
+    head->content = content;
+    head->next = NULL;
+    return (head); 
+}

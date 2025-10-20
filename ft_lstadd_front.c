@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yobouaji <yobouaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 12:34:50 by yobouaji          #+#    #+#             */
-/*   Updated: 2025/10/20 17:26:04 by yobouaji         ###   ########.fr       */
+/*   Created: 2025/10/20 08:01:07 by yobouaji          #+#    #+#             */
+/*   Updated: 2025/10/20 09:44:45 by yobouaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdlib.h>
+#include "libft.h"
 
-// typedef struct s_string
-// {
-//     void *content;
-//     struct s_string *next;
-// } string;
+void ft_lstadd_front(t_list **lst, t_list *new)
+{
+    if (!lst || !new)
+        return ;
+    new->next = *lst;
+    *lst = new;
+}
 
-// string *name = malloc(sizeof(string));
-// name->content = "yobouaji";
-// name->next = NULL;
+int main()
+{
+    t_list *list = NULL;
+    t_list *node1 = ft_lstnew("hello");
+    t_list *node2 = ft_lstnew("world");
 
-// int long long 
-// typedef int long long   LON 
+    ft_lstadd_front(&list, node2);
+    ft_lstadd_front(&list, node1);
+}
